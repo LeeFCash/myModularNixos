@@ -24,5 +24,6 @@
 #	./flatpak.nix
 	./bluetooth.nix
 	./pcLagFixMaybe.nix
+	./cStuff.nix
     ];
 }
