@@ -18,9 +18,18 @@
   };
 
 # self added but is for(not 100%) Power button presses / Lid switches (on laptops) / Idle timeout behavior
-  services.logind.extraConfig = ''
-	IdleAction=ignore
-  '';
+#  services.logind.extraConfig = '' # not being used anymore
+#	IdleAction=ignore
+#  '';
+#
+services.logind.settings = {
+	Login = {
+		IdleAction = "ignore"; # the system doesn’t suspend or shut down on idle
+		HandlePowerKey = "ignore"; # Ignore power button presses
+		HandleLidSwitch = "ignore"; # Ignore lid closing
+#		IdleActionSec = "30min"; # Timeout before idle action (if not ignored)
+	};
+};
 
 # I added due to needing to have the portals for screen capture (steam Remote Play)
   xdg.portal = {

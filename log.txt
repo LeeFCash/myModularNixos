@@ -1,0 +1,1 @@
+updated my config "services.logind.settings" for no action for time and added to it and updated dolphen all do to a change done in what I was wanting to upgrade to(if I did not upgrade than I don't need to care and my system would still be good) - log 1

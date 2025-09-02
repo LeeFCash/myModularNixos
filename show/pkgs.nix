@@ -25,7 +25,8 @@ environment.systemPackages = with pkgs; [
 	godot
 	obs-studio
 	# dolpin start
-	libsForQt5.dolphin
+#	libsForQt5.dolphin # seems to no longer exist 
+	kdePackages.dolphin # may have replaced libsForQt5.dolphin 
 	kdePackages.dolphin-plugins
 	kdePackages.kio-extras   # For thumbnails like images, PDFs, etc.
 	kdePackages.breeze-icons # Default KDE icon theme
