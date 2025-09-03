@@ -7,6 +7,7 @@
 {
   imports =
     [ # Include the results of the hardware scan.
-	./show/imports.nix
+	./pc1/imports.nix
+#	./pc2/imports.nix
     ];
 }
