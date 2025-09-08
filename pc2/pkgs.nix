@@ -69,7 +69,6 @@ environment.systemPackages = with pkgs; [
 	jdk # for jave with GUI stuff
 #	atlauncher # minecrft lancher mods, servers(does not seem to work)
 #	kiwix # Kiwix is open source. It is a free and open-source software project dedicated to providing offline access to free educational content, and its code is fully open-source and available for use, modification, and distribution.
-	peertube # test
   ];
 
 #nixpkgs.config.permittedInsecurePackages = [
