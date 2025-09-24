@@ -2,7 +2,7 @@
 
 {
 system.autoUpgrade = {
-	enable = true;
+	enable = false;
 	allowReboot = false;
 	channel = "https://nixos.org/channels/nixos-unstable";
   };
@@ -12,7 +12,7 @@ system.autoUpgrade = {
 	gc = {
 		automatic = true;
 		dates = "hourly";
-		options = "--delete-older-than 1d";
+		options = "--delete-older-than 7d";
 	};
 
   };

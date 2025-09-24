@@ -44,7 +44,7 @@ environment.systemPackages = with pkgs; [
 	ani-cli # anime in browser
 	ardour # can be used for music royalty-free
 	networkmanagerapplet
-#	nm-tray # also network manager
+#	nm-tray # also network manager # also seems to have been removed 
 	prismlauncher
 	htop
 	zip
