@@ -25,5 +25,6 @@
 	./bluetooth.nix
 	./pcLagFixMaybe.nix
 	./cStuff.nix
+	./niriWM.nix
     ];
 }
