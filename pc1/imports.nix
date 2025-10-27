@@ -11,7 +11,7 @@
 	./gcAndUpgradeAndChannel.nix
 	./users.nix
 	./pkgs.nix
-	./only_for_AMD_GPUs.nix
+#	./only_for_AMD_GPUs.nix
 #	./swayWM.nix
 	./hyprland.nix
 	./kdeP.nix
@@ -23,8 +23,9 @@
 	./alrv.nix
 #	./flatpak.nix
 	./bluetooth.nix
-	./pcLagFixMaybe.nix
+#	./pcLagFixMaybe.nix
 	./cStuff.nix
 	./niriWM.nix
+	./forNvidiaGPUs.nix
     ];
 }
