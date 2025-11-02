@@ -10,7 +10,7 @@ hardware.nvidia = {
 	modesetting.enable = true;
 	package = config.boot.kernelPackages.nvidiaPackages.beta; # .stable or .beta for newer drivers
 	open = true;# Enable open-source kernel modules
-	nvidiaSettings = true;  # Enable nvidia-settings tool
+	nvidiaSettings = true;
 };
 services.xserver.videoDrivers = [ "nvidia" ];
 }

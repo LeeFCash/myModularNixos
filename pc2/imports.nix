@@ -23,5 +23,7 @@
 #	./flatpak.nix
 	./bluetooth.nix
 	./cStuff.nix
+	./foramdAndNvidiaGPUs.nix
+	./niriWM.nix
     ];
 }
