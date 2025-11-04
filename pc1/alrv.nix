@@ -35,12 +35,15 @@ environment.systemPackages = with pkgs; [
 
 #journalctl --user -u wivrn (info like code)
 
+#'vaapiVdpau' has been renamed to/replaced by 'libva-vdpau-driver'
+
 hardware.graphics = {
 	enable = true;
 	enable32Bit = true; # Ensure compatibility with SteamVR
 #    extraPackages = with pkgs; [ amdvlk ];
 	extraPackages = with pkgs; [
-		vaapiVdpau
+#		vaapiVdpau
+		libva-vdpau-driver
 		libvdpau-va-gl
 		vulkan-loader
 #		vulkan-validation-layers

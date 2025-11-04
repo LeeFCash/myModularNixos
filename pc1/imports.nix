@@ -23,7 +23,6 @@
 	./alrv.nix
 #	./flatpak.nix
 	./bluetooth.nix
-#	./pcLagFixMaybe.nix
 	./cStuff.nix
 	./niriWM.nix
 	./forNvidiaGPUs.nix

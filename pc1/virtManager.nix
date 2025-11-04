@@ -13,13 +13,15 @@ networking.firewall = {
 programs.dconf.enable = true;
 programs.virt-manager.enable = true;
   
+#'win-virtio' has been renamed to/replaced by 'virtio-win'
 environment.systemPackages = with pkgs; [
 	virt-manager
 	virt-viewer
 	spice 
 	spice-gtk
 	spice-protocol
-	win-virtio
+#	win-virtio
+	virtio-win
 	win-spice
 	dnsmasq
 ];

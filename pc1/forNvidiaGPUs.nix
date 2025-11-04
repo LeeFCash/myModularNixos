@@ -1,10 +1,13 @@
 { config, lib, pkgs, ... }:
 
 {
+nixpkgs.config.allowBroken = true;# for now 
+#'glxinfo' has been renamed to/replaced by 'mesa-demos'
 environment.systemPackages = with pkgs; [
 #	nvidia-settings
-	glxinfo
-	cudatoolkit
+#	glxinfo
+	mesa-demos
+	cudatoolkit# nixpkgs.config.allowBroken = true;
 ];
 hardware.nvidia = {
 	modesetting.enable = true;
