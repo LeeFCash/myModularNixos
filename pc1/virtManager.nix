@@ -17,13 +17,16 @@ programs.virt-manager.enable = true;
 environment.systemPackages = with pkgs; [
 	virt-manager
 	virt-viewer
-	spice 
+	spice#Complete open source solution for interaction with virtualized desktop devices
 	spice-gtk
 	spice-protocol
 #	win-virtio
 	virtio-win
 	win-spice
 	dnsmasq
+	virglrenderer#Virtual 3D GPU for use inside QEMU virtual machines
+	qemu_kvm#Generic and open source machine emulator and virtualizer
+	libvirt#Toolkit to interact with the virtualization capabilities of recent versions of Linux and other OSes
 ];
   
   virtualisation = {

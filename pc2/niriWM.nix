@@ -11,8 +11,10 @@ environment.systemPackages = with pkgs; [
 	alacritty
 	fuzzel
 	waybar
-	xwayland-satellite
-#	mako
+	xwayland-satellite#Xwayland outside your Wayland compositor
+	mako#notification daemon
+	swaybg#A wallpaper utility for Wayland compositors, that is compatible with any Wayland compositor which implements the following Wayland protocols: wlr-layer-shell, xdg-output, and xdg-shell.
+	wlrctl
   ];
 
 programs.niri.enable = true;
