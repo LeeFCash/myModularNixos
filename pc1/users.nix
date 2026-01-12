@@ -5,7 +5,7 @@
 users.users.leecash = {
 	isNormalUser = true;
 	description = "LeeCash";
-	extraGroups = [ "networkmanager" "wheel" "libvirtd" "openrazer" ];
+	extraGroups = [ "networkmanager" "wheel" "libvirtd" "openrazer" "seat" ];
 	packages = with pkgs; [
 		# user only stuff
 	];

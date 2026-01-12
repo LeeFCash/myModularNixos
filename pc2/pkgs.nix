@@ -71,6 +71,8 @@ environment.systemPackages = with pkgs; [
 #	kiwix # Kiwix is open source. It is a free and open-source software project dedicated to providing offline access to free educational content, and its code is fully open-source and available for use, modification, and distribution.
 	python312
 	gimp
+	python312Packages.flask
+	nh# nixos search 
   ];
 
 #nixpkgs.config.permittedInsecurePackages = [

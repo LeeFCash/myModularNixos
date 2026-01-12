@@ -1,6 +1,7 @@
 { config, pkgs, lib, ... }:
 
 {
+nix.settings.experimental-features = [ "nix-command" ];
 # Enable sound with pipewire.
   services.pulseaudio.enable = false;
   security.rtkit.enable = true;

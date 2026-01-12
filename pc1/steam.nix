@@ -11,7 +11,6 @@
   };
 hardware.xone.enable = true; # support for the xbox controller USB dongle
 environment.sessionVariables.NIXOS_OZONE_WL = "1"; # Enable Wayland for Ozone apps # tells Steam (and other Ozone-based apps) to prefer Wayland, which is critical for compatibility with Gamescope in your Wayland-based NixOS setup. It’s a small but important setting to ensure your Gamescope session has the best chance of working. Let me know the results of the suggested checks or any specific errors!
-# more for remotePlay in system the portal for the video part of it
 # Vulkan for games (adjust for your GPU: amd/nvidia/intel)
-#hardware.steam-hardware.enable = true;  # Pulls in Vulkan layers # should work without even in niri WM
+#hardware.steam-hardware.enable = true;  # Pulls in Vulkan layers # should work without even in niri WM #Bottom line: Leave it commented/disabled. It's redundant (and could conflict if explicit). Your Xbox dongle uses hardware.xone instead, which is correct. #If you do have a Steam Controller/Vive acting up (e.g., journalctl -u systemd-udevd | grep uinput shows permission errors), uncomment it – but test games first post-rebuild. Vulkan layers? Totally separate (handled by hardware.opengl or Mesa drivers). No relation.
 }

@@ -6,11 +6,13 @@ environment.systemPackages = with pkgs; [
 	git
 	unzip
 	nodejs_24
-	yarn
+#	yarn
 	electron
-	vim
+#	vim
+	neovim
 	wget
 #	brave
+	firefox
 	(brave.override {
 		commandLineArgs = "--password-store=basic";
 	})
@@ -52,10 +54,10 @@ environment.systemPackages = with pkgs; [
 	distrobox
 	boxbuddy
 	#python2
-	docker
-	podman
-	killall
-	appimage-run
+#	docker
+#	podman
+#	killall
+#	appimage-run
 	video-downloader
 	shotcut
 	flowblade
@@ -64,12 +66,38 @@ environment.systemPackages = with pkgs; [
 	libinput
 	usbutils
 	freetube # open source
-	netbeans # for class and java
+#	netbeans # for class and java
 #	davinci-resolve # to test
 #	jdk21_headless # for java without GUI stuff
 	jdk # for jave with GUI stuff
 #	atlauncher # minecrft lancher mods, servers(does not seem to work)
 #	kiwix # Kiwix is open source. It is a free and open-source software project dedicated to providing offline access to free educational content, and its code is fully open-source and available for use, modification, and distribution.
+	gradle#for minecraft modding 
+	#evaluation warning: jetbrains.idea-community-src: IntelliJ IDEA Community has been discontinued by Jetbrains. This is now an alias for 'jetbrains.idea-oss', the Open Source build of IntelliJ.
+	jetbrains.idea-community-src#modding minecraft
+	# warning up
+	python312
+	python312Packages.flask
+	nh# nixos package search 
+	bash
+#	lutris
+	(lutris.override {
+		extraPkgs = pkgs: [
+			pkgs.wineWowPackages.stagingFull
+			pkgs.winetricks
+			pkgs.wineWowPackages.waylandFull
+			pkgs.wineWowPackages.yabridge
+		];
+	}
+	)
+	file#file info
+	unityhub#test
+	spotify
+	davinci-resolve#test
+	ffmpeg-full#don't seem to do anything with davinci resolve 
+	audacity# Sound editor with graphical UI
+	easyeffects# Audio effects for PipeWire applications
+	mission-center# Monitor your CPU, Memory, Disk, Network and GPU usage / can stop stuff I think
   ];
 
 #nixpkgs.config.permittedInsecurePackages = [
