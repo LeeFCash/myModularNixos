@@ -21,7 +21,7 @@
 	./virtManager.nix
 	./steam.nix
 	./alrv.nix
-#	./flatpak.nix
+	./flatpak.nix
 	./bluetooth.nix
 	./cStuff.nix
 	./niriWM.nix# works 

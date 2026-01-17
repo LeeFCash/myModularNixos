@@ -4,83 +4,62 @@
 nixpkgs.config.allowUnfree = true;
 environment.systemPackages = with pkgs; [
 	git
+	godot
+	gradle#for minecraft modding 
 	unzip
+	unityhub#test
+	usbutils
 	nodejs_24
-#	yarn
-	electron
-#	vim
 	neovim
+	neofetch
+	networkmanagerapplet
+	nh# nixos package search 
+	electron
+	easyeffects# Audio effects for PipeWire applications
 	wget
-#	brave
+	wofi
+	waybar
 	firefox
+	file#file info
+	fuse
+	flowblade
+	freetube # open source
 	(brave.override {
 		commandLineArgs = "--password-store=basic";
 	})
 	blender
-	neofetch
-	kitty
-	wofi
-	waybar
 	blueman
+	boxbuddy
+	bash
+	kitty
+	kdePackages.dolphin         # may have replaced libsForQt5.dolphin 
+	kdePackages.dolphin-plugins
+	kdePackages.kio-extras      # for dolphin # For thumbnails like images, PDFs, etc.
+	kdePackages.breeze-icons    # for dolphin # Default KDE icon theme
 	hyprshot
 	swaynotificationcenter
 	pavucontrol
+	prismlauncher
+#	podman
 	discord-ptb
+	distrobox
+#	docker
 	tmux
 	tree
-	godot
 	obs-studio
-	# dolpin start
-#	libsForQt5.dolphin # seems to no longer exist 
-	kdePackages.dolphin # may have replaced libsForQt5.dolphin 
-	kdePackages.dolphin-plugins
-	kdePackages.kio-extras   # For thumbnails like images, PDFs, etc.
-	kdePackages.breeze-icons # Default KDE icon theme
-	hicolor-icon-theme       # Fallback icon theme
-	adwaita-icon-theme # GTK compatibility
-	# dolpin end
-	vlc
-	fuse
+	hicolor-icon-theme          # for dolphin # Fallback icon theme
 	handbrake
-	libgbm
-	lynx # terminal browser 
+	htop
+	adwaita-icon-theme          # for dolphin # GTK compatibility
 	ani-cli # anime in browser
 	ardour # can be used for music royalty-free
-	networkmanagerapplet
-#	nm-tray # also network manager # also seems to have been removed 
-	prismlauncher
-	htop
-	zip
-	distrobox
-	boxbuddy
-	#python2
-#	docker
-#	podman
-#	killall
+	audacity# Sound editor with graphical UI
 #	appimage-run
+	vlc
+	vim
 	video-downloader
-	shotcut
-	flowblade
-	speedtest-cli
-#	flatpak # don't seem to work
+	libgbm
 	libinput
-	usbutils
-	freetube # open source
-#	netbeans # for class and java
-#	davinci-resolve # to test
-#	jdk21_headless # for java without GUI stuff
-	jdk # for jave with GUI stuff
-#	atlauncher # minecrft lancher mods, servers(does not seem to work)
-#	kiwix # Kiwix is open source. It is a free and open-source software project dedicated to providing offline access to free educational content, and its code is fully open-source and available for use, modification, and distribution.
-	gradle#for minecraft modding 
-	#evaluation warning: jetbrains.idea-community-src: IntelliJ IDEA Community has been discontinued by Jetbrains. This is now an alias for 'jetbrains.idea-oss', the Open Source build of IntelliJ.
-	jetbrains.idea-community-src#modding minecraft
-	# warning up
-	python312
-	python312Packages.flask
-	nh# nixos package search 
-	bash
-#	lutris
 	(lutris.override {
 		extraPkgs = pkgs: [
 			pkgs.wineWowPackages.stagingFull
@@ -90,13 +69,13 @@ environment.systemPackages = with pkgs; [
 		];
 	}
 	)
-	file#file info
-	unityhub#test
+	lynx # terminal browser 
+	zip
+	shotcut
+	speedtest-cli
 	spotify
-	davinci-resolve#test
-	ffmpeg-full#don't seem to do anything with davinci resolve 
-	audacity# Sound editor with graphical UI
-	easyeffects# Audio effects for PipeWire applications
+	jdk # for jave with GUI stuff
+	jetbrains.idea-community-src#modding minecraft # seems to be changed to jetbrains.idea-oss
 	mission-center# Monitor your CPU, Memory, Disk, Network and GPU usage / can stop stuff I think
   ];
 
