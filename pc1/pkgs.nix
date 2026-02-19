@@ -4,13 +4,14 @@
 nixpkgs.config.allowUnfree = true;
 environment.systemPackages = with pkgs; [
 	git
+	gimp2
 	godot
 	gradle#for minecraft modding 
 	unzip
 	unityhub#test
 	usbutils
 	nodejs_24
-	neovim
+#	neovim
 	neofetch
 	networkmanagerapplet
 	nh# nixos package search 
@@ -56,7 +57,7 @@ environment.systemPackages = with pkgs; [
 	audacity# Sound editor with graphical UI
 #	appimage-run
 	vlc
-	vim
+#	vim
 	video-downloader
 	libgbm
 	libinput

@@ -26,6 +26,7 @@
 	./cStuff.nix
 	./niriWM.nix# works 
 	./forNvidiaGPUs.nix
+	./neoVim.nix
 #	./noctalia.nix# not sure but what I have seems to be a flake / I as of 2025 - 10 - 12 (year - day - month ) I have not learned flakes
     ];
 }
