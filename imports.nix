@@ -9,7 +9,9 @@
     [ # Include the results of the hardware scan.
 #	./pc1/imports.nix
 #	./pc2/imports.nix
-	./configs/mainConfig.nix
+#	./configs/mainConfig.nix
+	./configs/mainConfigV2.nix
+#	./configs/mainConfigTestingV.nix
 	./hardwareConfigs/forNvidiaGPUs.nix
     ];
 }

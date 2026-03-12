@@ -37,7 +37,8 @@ environment.systemPackages = with pkgs; [
 # F
 	firefox
 	file#file info
-	fuse
+	fuse# seems to be needed by gear lover 
+	fuse2# seems to be needed by gear lover 
 	fuzzel# forgot what this was but it has something to do with niri
 	flowblade
 	freetube # open source
@@ -76,6 +77,8 @@ environment.systemPackages = with pkgs; [
 	pavucontrol#alvr
 	prismlauncher
 	pyright# language servers
+#	python312
+#	python312Packages.flask
 	#podman
 # D
 	discord-ptb
@@ -99,7 +102,7 @@ environment.systemPackages = with pkgs; [
 	alacritty
 	alvr
 	alsa-lib#alvr
-	#appimage-run
+	appimage-run# their is a flatpak called Gear Lever that is a utility to manage AppImages with ease! Gear lever will organize and manage AppImage files for you, generate desktop entries and app metadata, update apps in-place or keep multiple versions side-by-side.
 # V
 	vlc
 	#vim
@@ -113,6 +116,7 @@ environment.systemPackages = with pkgs; [
 # L
 	libvirt# for virt manager vm #Toolkit to interact with the virtualization capabilities of recent versions of Linux and other OSes
 	libva#alvr
+	libnotify# notify-send 
 	libgbm
 	libdrm#alvr
 	libinput
@@ -137,6 +141,8 @@ environment.systemPackages = with pkgs; [
 	jdk # for jave with GUI stuff
 	jdt-language-server# language server
 	jetbrains.idea-oss#modding minecraft
+	jetbrains-toolbox
+	jq# Lightweight and flexible command-line JSON processor # also needed for random win + tab = go to random window
 # M
 	mission-center# Monitor your CPU, Memory, Disk, Network and GPU usage / can stop stuff I think
 	mesa#alvr
@@ -185,7 +191,7 @@ programs.neovim = {
 				nvim-lspconfig
 				cmp-buffer
 				cmp-path
-				nvim-jdtls
+#				nvim-jdtls# some error # 2026/3/04 
 			];
 		};
 	};
@@ -251,9 +257,18 @@ configure = {
 				nvim-jdtls
 			];
 */
+/*
+programs.bash = {
+	enable = true;
+	shellAliases = {
+		rebuild = "sudo nixos-rebuild switch";
+	};
+}
+*/
 # services.xserver.displayManager.sddm.enable = true;  # SDDM is the recommended display manager for Plasma
 # services.xserver.desktopManager.plasma6.enable = true;  # Enable KDE Plasma
 services.desktopManager.plasma6.enable = true;
+#
 #services.displayManager.sddm.enable = true;
 #evaluation warning: The option `services.displayManager.sddm.autoLogin.user' defined in `/etc/nixos/myModularNixos/show/kdeP.nix' has been renamed to `services.displayManager.autoLogin.user'.
 #evaluation warning: The option `services.displayManager.sddm.autoLogin.enable' defined in `/etc/nixos/myModularNixos/show/kdeP.nix' has been renamed to `services.displayManager.autoLogin.enable'.
@@ -455,11 +470,14 @@ boot.kernelPackages = pkgs.linuxPackages_latest;
 users.users.leecash = {
 	isNormalUser = true;
 	description = "LeeCash";
-	extraGroups = [ "networkmanager" "wheel" "libvirtd" "openrazer" "seat" ];
+	extraGroups = [ "networkmanager" "wheel" "libvirtd" "openrazer" "seat" "gamemode" ];
 	packages = with pkgs; [
 		# user only stuff
 	];
 };
+
+programs.gamemode.enable = true;
+
 /*
 # c# tested and worked but the output was not the same -
 #// See https://aka.ms/new-console-template for more information
@@ -508,7 +526,7 @@ users.users.leecash = {
 */
 # hyprland and hyprland stuff
   programs.hyprland.enable = true;
-  xdg.portal.wlr.enable = true;
+  xdg.portal.wlr.enable = true;# I know not why but error 
 #Fix real-time scheduling (reduce input lag) #don't know if this still matters since if I remeber right this was for something I already fixed
   security.pam.loginLimits = [
   { domain = "*"; type = "hard"; item = "rtprio"; value = "95"; }
